@@ -75,7 +75,7 @@ public class App extends AppCompatActivity {
         //}
 
         final String[] appName = {"Google","Google Maps","Facebook","Messenger","Instagram","Whatsapp","MX Player"};
-        final int[] appLogo = {R.drawable.google,R.drawable.googlemaps,R.drawable.facebook,R.drawable.messenger,R.drawable.instagram,R.drawable.whatsapp,R.drawable.mxplayer};
+        final int[] appLogo = {R.mipmap.google,R.mipmap.googlemaps,R.mipmap.facebook,R.mipmap.messenger,R.mipmap.instagram,R.mipmap.whatsapp,R.mipmap.mxplayer};
 
         dataModel = new ArrayList<>();
 

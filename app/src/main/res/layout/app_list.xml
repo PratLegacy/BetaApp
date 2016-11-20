@@ -32,7 +32,7 @@
                     android:foregroundGravity="center"
                     android:padding="4dp"
                     android:layout_marginLeft="10dp"
-                    android:src="@drawable/facebook" />
+                    android:src="@mipmap/facebook" />
 
                 <TextView
                     android:id="@+id/appName"
