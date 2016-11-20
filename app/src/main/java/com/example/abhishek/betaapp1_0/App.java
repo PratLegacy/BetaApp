@@ -74,8 +74,8 @@ public class App extends AppCompatActivity {
           //  getSupportActionBar().setTitle("Beta Apps");
         //}
 
-        final String[] appName = {"Google","Google Maps","Facebook","Instagram","Whatsapp","MX Player"};
-        final int[] appLogo = {R.drawable.google,R.drawable.googlemaps,R.drawable.facebook,R.drawable.instagram,R.drawable.whatsapp,R.drawable.mxplayer};
+        final String[] appName = {"Google","Google Maps","Facebook","Messenger","Instagram","Whatsapp","MX Player"};
+        final int[] appLogo = {R.drawable.google,R.drawable.googlemaps,R.drawable.facebook,R.drawable.messenger,R.drawable.instagram,R.drawable.whatsapp,R.drawable.mxplayer};
 
         dataModel = new ArrayList<>();
 
