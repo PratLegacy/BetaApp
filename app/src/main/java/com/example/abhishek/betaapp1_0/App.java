@@ -56,13 +56,13 @@ public class App extends AppCompatActivity {
         final String[] appName = {"Google","Google Maps","HERE WeGo - City Navigation",
                 "Pushbullet","Facebook","Messenger",
                 "Instagram","Whatsapp","Snapchat",
-                "Drippler - Tech Support & Tips","MX Player","VLC",
-                "ibVPN - Fast & Unlimited VPN"};
+                "Tumblr","Drippler - Tech Support & Tips","MX Player",
+                "VLC","ibVPN - Fast & Unlimited VPN"};
         final int[] appLogo = {R.mipmap.google,R.mipmap.googlemaps,R.mipmap.herewego,
                 R.mipmap.pushbullet,R.mipmap.facebook,R.mipmap.messenger,
                 R.mipmap.instagram,R.mipmap.whatsapp,R.mipmap.snapchat,
-                R.mipmap.drippler,R.mipmap.mxplayer,R.mipmap.vlc,
-                R.mipmap.ibvpn};
+                R.mipmap.tumblr,R.mipmap.drippler,R.mipmap.mxplayer,
+                R.mipmap.vlc,R.mipmap.ibvpn};
 
         dataModel = new ArrayList<>();
 

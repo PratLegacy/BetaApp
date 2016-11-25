@@ -141,6 +141,14 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
                         Toast.makeText(view.getContext(), "App is:" + data.getAppName(), Toast.LENGTH_SHORT).show();
                     }
 
+                    else if (data.getAppName() == "Tumblr") {
+                        String url = "https://play.google.com/apps/testing/com.tumblr";
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        view.getContext().startActivity(intent);
+                        Toast.makeText(view.getContext(), "App is:" + data.getAppName(), Toast.LENGTH_SHORT).show();
+                    }
+
                     else if (data.getAppName() == "Drippler - Tech Support & Tips") {
                         String url = "https://play.google.com/apps/testing/com.drippler.android.updates";
                         Intent intent = new Intent(Intent.ACTION_VIEW);
