@@ -85,6 +85,14 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
                         Toast.makeText(view.getContext(), "App is:" + data.getAppName(), Toast.LENGTH_SHORT).show();
                     }
 
+                    else if (data.getAppName() == "HERE WeGo - City Navigation") {
+                        String url = "https://play.google.com/apps/testing/com.here.app.maps";
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        view.getContext().startActivity(intent);
+                        Toast.makeText(view.getContext(), "App is:" + data.getAppName(), Toast.LENGTH_SHORT).show();
+                    }
+
                     else if (data.getAppName() == "Pushbullet") {
                         String url = "https://play.google.com/apps/testing/com.pushbullet.android";
                         Intent intent = new Intent(Intent.ACTION_VIEW);
@@ -127,6 +135,14 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
 
                     else if (data.getAppName() == "Snapchat") {
                         String url = "https://play.google.com/apps/testing/com.snapchat.android";
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        view.getContext().startActivity(intent);
+                        Toast.makeText(view.getContext(), "App is:" + data.getAppName(), Toast.LENGTH_SHORT).show();
+                    }
+
+                    else if (data.getAppName() == "Drippler - Tech Support & Tips") {
+                        String url = "https://play.google.com/apps/testing/com.drippler.android.updates";
                         Intent intent = new Intent(Intent.ACTION_VIEW);
                         intent.setData(Uri.parse(url));
                         view.getContext().startActivity(intent);

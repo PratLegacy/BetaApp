@@ -53,14 +53,14 @@ public class App extends AppCompatActivity {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
 
-        final String[] appName = {"Google","Google Maps","Pushbullet",
-                "Facebook","Messenger","Instagram",
-                "Whatsapp","Snapchat","MX Player",
-                "VLC"};
-        final int[] appLogo = {R.mipmap.google,R.mipmap.googlemaps,R.mipmap.pushbullet,
-                R.mipmap.facebook,R.mipmap.messenger,R.mipmap.instagram,
-                R.mipmap.whatsapp,R.mipmap.snapchat,R.mipmap.mxplayer,
-                R.mipmap.vlc};
+        final String[] appName = {"Google","Google Maps","HERE WeGo - City Navigation",
+                "Pushbullet","Facebook","Messenger",
+                "Instagram","Whatsapp","Snapchat",
+                "Drippler - Tech Support & Tips","MX Player","VLC"};
+        final int[] appLogo = {R.mipmap.google,R.mipmap.googlemaps,R.mipmap.herewego,
+                R.mipmap.pushbullet,R.mipmap.facebook,R.mipmap.messenger,
+                R.mipmap.instagram,R.mipmap.whatsapp,R.mipmap.snapchat,
+                R.mipmap.drippler,R.mipmap.mxplayer,R.mipmap.vlc};
 
         dataModel = new ArrayList<>();
 
