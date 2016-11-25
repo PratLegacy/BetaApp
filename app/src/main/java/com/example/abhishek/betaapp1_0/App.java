@@ -4,6 +4,7 @@ import android.app.SearchManager;
 import android.content.Context;
 import android.graphics.Color;
 import android.provider.ContactsContract;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
@@ -22,7 +23,7 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.miguelcatalan.materialsearchview.MaterialSearchView;
+
 
 import java.util.ArrayList;
 import java.util.List;
@@ -34,19 +35,10 @@ public class App extends AppCompatActivity {
     private Toolbar toolbar;
     private RecyclerView recyclerView;
     private CardView cardView;
-    MaterialSearchView searchView;
 
     private ArrayList<DataModel> dataModel;
 
     private RecyclerView.Adapter adapter;
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu_item, menu);
-        MenuItem item = menu.findItem(R.id.action_search);
-        searchView.setMenuItem(item);
-        return true;
-    }
 
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -55,27 +47,20 @@ public class App extends AppCompatActivity {
 
         initControls();
 
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setTitle("Beta Apps");
-        toolbar.setTitleTextColor(Color.parseColor("#FFFFFF"));
-
-        searchView = (MaterialSearchView)findViewById(R.id.search_view);
-
-
     }
 
     private void initControls() {
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
 
-      //  if(toolbar != null) {
-        //    setSupportActionBar(toolbar);
-          //  getSupportActionBar().setTitle("Beta Apps");
-        //}
-
-        final String[] appName = {"Google","Google Maps","Facebook","Messenger","Instagram","Whatsapp","MX Player"};
-        final int[] appLogo = {R.mipmap.google,R.mipmap.googlemaps,R.mipmap.facebook,R.mipmap.messenger,R.mipmap.instagram,R.mipmap.whatsapp,R.mipmap.mxplayer};
+        final String[] appName = {"Google","Google Maps","Pushbullet",
+                "Facebook","Messenger","Instagram",
+                "Whatsapp","Snapchat","MX Player",
+                "VLC"};
+        final int[] appLogo = {R.mipmap.google,R.mipmap.googlemaps,R.mipmap.pushbullet,
+                R.mipmap.facebook,R.mipmap.messenger,R.mipmap.instagram,
+                R.mipmap.whatsapp,R.mipmap.snapchat,R.mipmap.mxplayer,
+                R.mipmap.vlc};
 
         dataModel = new ArrayList<>();
 

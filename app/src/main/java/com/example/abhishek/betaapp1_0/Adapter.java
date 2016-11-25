@@ -85,6 +85,14 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
                         Toast.makeText(view.getContext(), "App is:" + data.getAppName(), Toast.LENGTH_SHORT).show();
                     }
 
+                    else if (data.getAppName() == "Pushbullet") {
+                        String url = "https://play.google.com/apps/testing/com.pushbullet.android";
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        view.getContext().startActivity(intent);
+                        Toast.makeText(view.getContext(), "App is:" + data.getAppName(), Toast.LENGTH_SHORT).show();
+                    }
+
                     else if (data.getAppName() == "Facebook") {
                         String url = "https://play.google.com/apps/testing/com.facebook.katana/";
                         Intent intent = new Intent(Intent.ACTION_VIEW);
@@ -117,6 +125,14 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
                         Toast.makeText(view.getContext(), "App is:" + data.getAppName(), Toast.LENGTH_SHORT).show();
                     }
 
+                    else if (data.getAppName() == "Snapchat") {
+                        String url = "https://play.google.com/apps/testing/com.snapchat.android";
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        view.getContext().startActivity(intent);
+                        Toast.makeText(view.getContext(), "App is:" + data.getAppName(), Toast.LENGTH_SHORT).show();
+                    }
+
                     else if (data.getAppName() == "MX Player") {
                         String url = "https://play.google.com/apps/testing/com.mxtech.videoplayer.ad";
                         Intent intent = new Intent(Intent.ACTION_VIEW);
@@ -124,6 +140,15 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
                         view.getContext().startActivity(intent);
                         Toast.makeText(view.getContext(), "App is:" + data.getAppName(), Toast.LENGTH_SHORT).show();
                     }
+
+                    else if (data.getAppName() == "VLC") {
+                        String url = "https://play.google.com/apps/testing/org.videolan.vlc";
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        view.getContext().startActivity(intent);
+                        Toast.makeText(view.getContext(), "App is:" + data.getAppName(), Toast.LENGTH_SHORT).show();
+                    }
+
 
                 }
             });
