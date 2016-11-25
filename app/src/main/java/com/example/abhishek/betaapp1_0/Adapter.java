@@ -165,7 +165,13 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
                         Toast.makeText(view.getContext(), "App is:" + data.getAppName(), Toast.LENGTH_SHORT).show();
                     }
 
-
+                    else if (data.getAppName() == "ibVPN - Fast & Unlimited VPN") {
+                        String url = "https://play.google.com/apps/testing/com.ibvpn.client";
+                        Intent intent = new Intent(Intent.ACTION_VIEW);
+                        intent.setData(Uri.parse(url));
+                        view.getContext().startActivity(intent);
+                        Toast.makeText(view.getContext(), "App is:" + data.getAppName(), Toast.LENGTH_SHORT).show();
+                    }
                 }
             });
         }
