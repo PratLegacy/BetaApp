@@ -173,7 +173,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
                         Toast.makeText(view.getContext(), "App is:" + data.getAppName(), Toast.LENGTH_SHORT).show();
                     }
 
-                    else if (data.getAppName() == "PicsArt Photo Editor") {
+                    else if (data.getAppName() == "PicsArt Photo Studio") {
                         String url = "https://play.google.com/apps/testing/com.picsart.studio";
                         Intent intent = new Intent(Intent.ACTION_VIEW);
                         intent.setData(Uri.parse(url));
