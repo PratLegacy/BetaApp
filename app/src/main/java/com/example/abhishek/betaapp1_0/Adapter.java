@@ -196,6 +196,8 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
                         view.getContext().startActivity(intent);
                         Toast.makeText(view.getContext(), "App is:" + data.getAppName(), Toast.LENGTH_SHORT).show();
                     }
+
+
                 }
             });
         }
