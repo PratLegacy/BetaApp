@@ -12,6 +12,24 @@
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
         android:background="@color/colorPrimary">
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textSize="18sp"
+            android:hint="Search here"
+            android:textColor="@android:color/white"/>
+
+        <View
+            android:id="@+id/border"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@+id/search"
+            android:layout_marginTop="10dp"
+            android:background="#d3d3d3"/>
     </android.support.v7.widget.Toolbar>
 
     <android.support.v7.widget.RecyclerView

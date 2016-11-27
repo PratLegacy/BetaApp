@@ -20,6 +20,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
+import android.widget.SimpleAdapter;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,12 +30,14 @@ import java.util.ArrayList;
 import java.util.List;
 
 import static com.example.abhishek.betaapp1_0.R.id.appName;
+import static com.example.abhishek.betaapp1_0.R.layout.activity_app;
 
 public class App extends AppCompatActivity {
 
     private Toolbar toolbar;
     private RecyclerView recyclerView;
     private CardView cardView;
+    public EditText search;
 
     private ArrayList<DataModel> dataModel;
 
@@ -43,8 +46,8 @@ public class App extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_app);
-
+        setContentView(activity_app);
+        search = (EditText) findViewById( R.id.search);
         initControls();
 
     }
@@ -83,7 +86,37 @@ public class App extends AppCompatActivity {
         adapter = new Adapter(dataModel);
 
         recyclerView.setAdapter(adapter);
+        addTextListener();
     }
 
+    public void addTextListener(){
 
+        search.addTextChangedListener(new TextWatcher() {
+
+            public void afterTextChanged(Editable s) {}
+
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {}
+
+            public void onTextChanged(CharSequence query, int start, int before, int count) {
+
+                query = query.toString().toLowerCase();
+
+                final ArrayList<DataModel> filteredList = new ArrayList<DataModel>();
+
+                for (int i = 0; i < dataModel.size(); i++) {
+
+                    final String text = dataModel.get(i).getAppName().toLowerCase();
+                    if (text.contains(query)) {
+
+                        filteredList.add(dataModel.get(i));
+                    }
+                }
+
+                recyclerView.setLayoutManager(new LinearLayoutManager(App.this));
+                adapter = new Adapter(filteredList);
+                recyclerView.setAdapter(adapter);
+                adapter.notifyDataSetChanged();  // data set changed
+            }
+        });
+    }
 }
