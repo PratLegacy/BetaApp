@@ -14,4 +14,4 @@ Min android version 14, min sdk 25. Edit using Android Studio 2.2.1 minimum
 
 ## API Reference
 
-Uses RecyclerView for listing the apps
+Uses RecyclerView with CardView for listing the apps
