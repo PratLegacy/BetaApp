@@ -9,6 +9,8 @@
         android:layout_height="wrap_content"
         android:layout_width="match_parent"
         card_view:cardCornerRadius="10dp"
+        android:foreground="?attr/selectableItemBackgroundBorderless"
+        android:stateListAnimator="@animator/lift_on_touch"
         card_view:cardElevation="5dp"
         card_view:cardUseCompatPadding="true">
         

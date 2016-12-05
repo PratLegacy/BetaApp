@@ -32,6 +32,7 @@ public class MainActivity extends AppCompatActivity {
                 new PagerAdapter(getSupportFragmentManager(), MainActivity.this);
         viewPager.setAdapter(pagerAdapter);
 
+
         // Give the TabLayout the ViewPager
         TabLayout tabLayout = (TabLayout) findViewById(R.id.tab_layout);
         tabLayout.setupWithViewPager(viewPager);
@@ -53,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
     class PagerAdapter extends FragmentPagerAdapter {
 
-        String tabTitles[] = new String[]{"Your Apps", "Popular", "All"};
+        String tabTitles[] = new String[]{"Popular", "Your Apps", "All"};
         Context context;
 
         public PagerAdapter(FragmentManager fm, Context context) {
@@ -71,9 +72,9 @@ public class MainActivity extends AppCompatActivity {
 
             switch (position) {
                 case 0:
-                    return new Analyse();
-                case 1:
                     return new App();
+                case 1:
+                    return new Analyse();
                 case 2:
                     return new Soon();
             }

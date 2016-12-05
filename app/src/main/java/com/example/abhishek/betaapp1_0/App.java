@@ -10,6 +10,8 @@ import android.support.v7.widget.Toolbar;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
 import android.widget.LinearLayout;
 
 
@@ -45,7 +47,8 @@ public class App extends Fragment {
                              Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_blank, container, false);
         RecyclerView rv = (RecyclerView) rootView.findViewById(R.id.recyclerView);
-
+        Animation animation = AnimationUtils.loadAnimation(this.getContext(), R.anim.swing_up_left);
+        rootView.startAnimation(animation);
         final String[] appName = {"Google","Google Maps","HERE WeGo - City Navigation",
                 "Pushbullet","Facebook","Messenger",
                 "Instagram","Whatsapp","Snapchat",
