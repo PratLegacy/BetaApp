@@ -1,57 +1,50 @@
 package com.example.abhishek.betaapp1_0;
 
-import android.app.SearchManager;
-import android.content.Context;
-import android.graphics.Color;
-import android.provider.ContactsContract;
-import android.support.v4.view.MenuItemCompat;
+import android.support.v4.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
-import android.support.v7.widget.DefaultItemAnimator;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.support.v7.widget.SearchView;
 import android.support.v7.widget.Toolbar;
-import android.text.Editable;
-import android.text.TextWatcher;
-import android.view.Menu;
-import android.view.MenuItem;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.EditText;
-import android.widget.TextView;
-import android.widget.Toast;
-
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
 
 
 import java.util.ArrayList;
-import java.util.List;
 
-import static com.example.abhishek.betaapp1_0.R.id.appName;
-
-public class App extends AppCompatActivity {
+public class App extends Fragment {
 
     private Toolbar toolbar;
-    private RecyclerView recyclerView;
+    private RecyclerView rv;
     private CardView cardView;
 
     private ArrayList<DataModel> dataModel;
 
     private RecyclerView.Adapter adapter;
 
-    protected void onCreate(Bundle savedInstanceState) {
+    public App() {
+
+    }
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_app);
 
-        initControls();
+       // initControls();
 
     }
 
     private void initControls() {
-        toolbar = (Toolbar) findViewById(R.id.toolbar);
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+    }
+    @Override
+    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+                             Bundle savedInstanceState) {
+        View rootView = inflater.inflate(R.layout.fragment_blank, container, false);
+        RecyclerView rv = (RecyclerView) rootView.findViewById(R.id.recyclerView);
 
         final String[] appName = {"Google","Google Maps","HERE WeGo - City Navigation",
                 "Pushbullet","Facebook","Messenger",
@@ -76,13 +69,15 @@ public class App extends AppCompatActivity {
             dataModel.add(data);
         }
 
-        recyclerView.setHasFixedSize(true);
+        rv.setHasFixedSize(true);
 
-        recyclerView.setLayoutManager(new LinearLayoutManager(this));
 
         adapter = new Adapter(dataModel);
 
-        recyclerView.setAdapter(adapter);
+        rv.setAdapter(adapter);
+        LinearLayoutManager llm = new LinearLayoutManager(getActivity());
+        rv.setLayoutManager(llm);
+        return rootView;
     }
 
 
